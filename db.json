@@ -1,0 +1,29 @@
+{
+  "books": [
+    {
+      "name": "Jim Brown",
+      "position": "Frontend Developer",
+      "id": "c975ce90-eac5-11eb-9852-677f248db476"
+    },
+    {
+      "name": "Katy Wills",
+      "position": "Principal Software Engineer",
+      "id": "d7510480-eac5-11eb-9852-677f248db476"
+    },
+    {
+      "name": "John Doe",
+      "position": "Backend Engineer",
+      "id": "58d880a0-eac6-11eb-9852-677f248db476"
+    },
+    {
+      "name": "Ann White",
+      "position": "Program Manager",
+      "id": "61039120-eac6-11eb-9852-677f248db476"
+    },
+    {
+      "name": "Hazel Smith",
+      "position": "Database Architect",
+      "id": "1da2d9b0-eac9-11eb-9852-677f248db476"
+    }
+  ]
+}

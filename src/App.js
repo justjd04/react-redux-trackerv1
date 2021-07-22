@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import CandidateList from "./components/CandidateList";
+import NewCandidate from "./components/NewCandidate";
+import EditCandidate from "./components/EditCandidate";
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Provider store={store}>
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={CandidateList} />
+            <Route exact path="/candidates/new" component={NewCandidate} />
+            <Route
+              exact
+              path="/candidates/edit/:id"
+              component={EditCandidate}
+            />
+          </Switch>
+        </div>
+      </Provider>
+    </Router>
   );
 }
 
