@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const Axios = axios.create({
-  baseURL: "http://localhost:5000/",
+  baseURL: "https://my-json-server.typicode.com/justjd04/react-redux-trackerv1",
 });
 
 export default Axios;
