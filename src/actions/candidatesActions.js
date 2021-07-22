@@ -23,7 +23,7 @@ export function createNewCandidateAction(candidate) {
   return (dispatch) => {
     dispatch(newCandidate());
 
-    Axios.post("/books", candidate)
+    Axios.post("/candidates", candidate)
       .then((res) => {
         console.log(res);
         dispatch(addNewCandidateSuccess(candidate));
@@ -52,7 +52,7 @@ export function getCandidatesAction() {
   return (dispatch) => {
     dispatch(getCandidatesStart());
 
-    Axios.get("/books")
+    Axios.get("/candidates")
       .then((resp) => {
         dispatch(saveCandidateSuccess(resp.data));
       })
@@ -79,7 +79,7 @@ export function deleteCandidateAction(id) {
   return (dispatch) => {
     dispatch(getCandidateDelete());
 
-    Axios.delete(`/books/${id}`)
+    Axios.delete(`/candidates/${id}`)
       .then((resp) => {
         dispatch(deleteCandidateSuccess(id));
       })
@@ -106,7 +106,7 @@ export function getCandidateAction(id) {
   return (dispatch) => {
     dispatch(getEditCandidatesAction());
 
-    Axios.get(`/books/${id}`)
+    Axios.get(`/candidates/${id}`)
       .then((resp) => {
         console.log(resp.data);
         dispatch(candidateEditSuccess(resp.data));
@@ -135,7 +135,7 @@ export function editCandidateAction(candidate) {
   return (dispatch) => {
     dispatch(startEditCandidate());
 
-    Axios.put(`/books/${candidate.id}`, candidate)
+    Axios.put(`/candidates/${candidate.id}`, candidate)
       .then((resp) => {
         dispatch(editCandidateActionSuccess(resp.data));
         Swal.fire("Saved", "Successfully Updated", "success");

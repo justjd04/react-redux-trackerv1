@@ -1,7 +1,7 @@
 {
   "name": "react-redux-trackerv1",
   "version": "0.1.0",
-  "homepage": "https://justjd04.github.io/react-redux-trackerv1",
+  "homepage": "https://justjd04.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
